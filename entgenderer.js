@@ -20,11 +20,17 @@ class GenderRemover {
 
               while(this.currentChar != '\0') {
                   if(":/*_".includes(this.currentChar)) {
+                  	  this.advance();
+                  
                   	  if(this.currentChar == 'n') {
                       	  temp += this.currentChar;
                           
-                          advance();
+                          this.advance();
+                      } else if(this.currentChar == 'e') {
+                      	  this.advance();
                       } else {
+                      	  temp += this.currentChar;
+                      
                       	  while(!" \t.,;\0\n".includes(this.currentChar)) {
                           	  this.advance();
                       	  }
