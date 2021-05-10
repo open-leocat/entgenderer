@@ -29,7 +29,7 @@ class GenderRemover {
                       } else if(this.currentChar == 'e') {
                       	  this.advance();
                       } else {
-                      	  temp += this.currentChar;
+                      	  //temp += this.currentChar;
                       
                       	  while(!" \t.,;\0\n".includes(this.currentChar)) {
                           	  this.advance();
