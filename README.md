@@ -13,3 +13,9 @@ Have you ever wondered if there wasn't a solution to this problem? Something tha
 And if you don't want to bother with scripts, there's a handy website that does it for you!
 
 ## Script Usage
+
+```javascript
+var remover = new GenderRemover("Lehrer*Innen");   /* Initialize */
+
+console.log(remover.process());                    /* Process, print result */
+```
