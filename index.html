@@ -1,10 +1,19 @@
 <html>
   <head>
     <title>entgenderer</title>
+    <script>
+      import './entgenderer.js';
+
+      console.log(cleanFromGender('Hello World'));
+    </script>
    </head>
   <body>
-    <p>
-      Hello world!
-    </p>
+    <h1>entgenderer</h1>
+    <h3>Remove ideological garbage from German texts.</h3>
+    <p><b>Usage:</b> Enter the text and press OK.</p>
+
+    <textarea id="g_textarea"></textarea>
+    <br/>
+    <button id="g_button">OK</button>
   </body>
 </html>
