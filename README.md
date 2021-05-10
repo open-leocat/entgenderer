@@ -10,7 +10,7 @@ Have you ever wondered if there wasn't a solution to this problem? Something tha
 
 *This script is designed to do just that!* It removes (almost) all popular gender forms, and makes texts readable again.
 
-And if you don't want to bother with scripts, there's a handy website that does it for you!
+And if you don't want to bother with scripts, there's a handy [website](https://open-leocat.github.io/entgenderer/) that does it for you!
 
 ## Script Usage
 
