@@ -8,7 +8,7 @@ You read a text in German and suddenly you wonder if the author had a spontaneou
 
 Have you ever wondered if there wasn't a solution to this problem? Something that allows you to read texts without asterisks, colons or dashes again?
 
-*This script is designed to do just that!* It removes all gender forms, and makes texts readable again.
+*This script is designed to do just that!* It removes (almost) all popular gender forms, and makes texts readable again.
 
 And if you don't want to bother with scripts, there's a handy website that does it for you!
 
