@@ -4,7 +4,7 @@
    </head>
   <body>
     <script>
-      /* GenderRemover-class */ class GenderRemover{constructor(t){this.text=t,this.pos=-1,this.currentChar="\0",this.advance()}advance(){this.pos++,this.pos<this.text.length?this.currentChar=this.text.charAt(this.pos):this.currentChar="\0"}process(){for(var t="";"\0"!=this.currentChar;)if(":/*_".includes(this.currentChar))if(this.advance(),"n"==this.currentChar)t+=this.currentChar,this.advance();else if("e"==this.currentChar)this.advance();else for(t+=this.currentChar;!" \t.,;\0\n".includes(this.currentChar);)this.advance();else if("I"==this.currentChar)if("n"==this.text.charAt(this.pos+1))for(;!" \t.,;\0\n".includes(this.currentChar);)this.advance();else t+=this.currentChar,this.advance();else t+=this.currentChar,this.advance();return t}}
+      /* GenderRemover-class */ class GenderRemover{constructor(t){this.text=t,this.pos=-1,this.currentChar="\0",this.advance()}advance(){this.pos++,this.pos<this.text.length?this.currentChar=this.text.charAt(this.pos):this.currentChar="\0"}process(){for(var t="";"\0"!=this.currentChar;)if(":/*_".includes(this.currentChar))if(this.advance(),"n"==this.currentChar)t+=this.currentChar,this.advance();else if("e"==this.currentChar)this.advance();else for(;!" \t.,;\0\n".includes(this.currentChar);)this.advance();else if("I"==this.currentChar)if("n"==this.text.charAt(this.pos+1))for(;!" \t.,;\0\n".includes(this.currentChar);)this.advance();else t+=this.currentChar,this.advance();else t+=this.currentChar,this.advance();return t}}
       
       function onClick() {
           var remover = new GenderRemover(document.getElementById("g_area").value);
