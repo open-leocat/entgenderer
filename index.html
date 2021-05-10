@@ -4,54 +4,11 @@
    </head>
   <body>
     <script>
-      class GenderRemover {
-          constructor(text) {
-              this.text = text;
-              this.pos = -1;
-              this.currentChar = '\0';
-              this.advance();
-          }
-
-          advance() {
-              this.pos++;
-              if(this.pos < this.text.length) {
-                  this.currentChar = this.text.charAt(this.pos);
-              } else {
-                  this.currentChar = '\0';
-              }
-          }
-
-          process() {
-              var temp = "";
-
-              while(this.currentChar != '\0') {
-                  if(":/*_".includes(this.currentChar)) {
-                      while(!" \t.,;\0\n".includes(this.currentChar)) {
-                          this.advance();
-                      }
-                  } else if(this.currentChar == 'I') {
-                      if(this.text.charAt(this.pos+1) == 'n') {
-                          while(!" \t.,;\0\n".includes(this.currentChar)) {
-                              this.advance();
-                          }
-                      } else {
-                          temp += this.currentChar;
-
-                          this.advance();
-                      }
-                  } else {
-                      temp += this.currentChar;
-
-                      this.advance();
-                  }
-              }
-
-              return temp;
-          }
-      }
+      /* GenderRemover-Class */ class GenderRemover{constructor(t){this.text=t,this.pos=-1,this.currentChar="\0",this.advance()}advance(){this.pos++,this.pos<this.text.length?this.currentChar=this.text.charAt(this.pos):this.currentChar="\0"}process(){for(var t="";"\0"!=this.currentChar;)if(":/*_".includes(this.currentChar))for(;!" \t.,;\0\n".includes(this.currentChar);)this.advance();else if("I"==this.currentChar)if("n"==this.text.charAt(this.pos+1))for(;!" \t.,;\0\n".includes(this.currentChar);)this.advance();else t+=this.currentChar,this.advance();else t+=this.currentChar,this.advance();return t}}
       
       function onClick() {
-          alert("lol");
+          var remover = GenderRemover(document.getElementById("g_area").value);
+          document.getElementById("g_area").value = remover.process();
       }
     </script>
     
@@ -59,7 +16,7 @@
     <h3>Remove ideological garbage from German texts.</h3>
     <p><b>Usage:</b> Enter the text and press OK.</p>
 
-    <textarea id="g_textarea"></textarea>
+    <textarea id="g_area"></textarea>
     <br/>
     <button id="g_button" onclick="onClick()">OK</button>
   </body>
